@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{5b33e74d-b54a-4695-bc95-942dc58198b3}</ProjectGuid>
-    <RootNamespace>Powtorzenie</RootNamespace>
+    <ProjectGuid>{d3600fe4-45e2-4870-8c35-84e8d1c8acea}</ProjectGuid>
+    <RootNamespace>Powtórzenie</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Powtorzenie.cpp" />
+    <ClCompile Include="Powtórzenie.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
