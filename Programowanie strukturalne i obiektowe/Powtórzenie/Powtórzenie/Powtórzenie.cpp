@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 void showMenu()
 {
@@ -10,7 +11,7 @@ void showMenu()
 	std::cout << "4. Zadanie 2\n";
 	std::cout << "5. Zadanie 3\n";
 	std::cout << "6. Zadanie 4\n";
-
+	std::cout << "7. Konwersja Liczb Na Binarne\n";
 	std::cout << "0. Zamknij program\n";
 }
 
@@ -158,13 +159,34 @@ void Zadanie4()
 		int digit = number % 10;
 		number = number / 10;
 
-		stringNumber = arrayOfWordsNumbers[digit] + " " + stringNumber;
+		stringNumber = arrayOfWordsNumbers[digit] + "" + stringNumber;
 
 	} while (number != 0);
 
 	std::cout << stringNumber;
 	std::cout << "\n";
 }
+
+void Zadanie7()
+{
+	int number;
+	char znak;
+	std::cout << "Podaj liczbe to konwersji na system binarny: ";
+	std::cin >> number;
+	std::string	stringNumber;
+	do
+	{
+		int digit = number % 2;
+		number = number / 2;
+		znak = digit + 48;
+		stringNumber += znak;
+
+	} while (number != 0);
+	for(int i = stringNumber.length();i >= 0;i--)
+	std::cout << stringNumber[i];
+	std::cout << "\n";
+}
+
 
 void doSelectedTask(int& selectedOption)
 {
@@ -187,6 +209,9 @@ void doSelectedTask(int& selectedOption)
 		break;
 	case 6:
 		Zadanie4();
+		break;
+	case 7:
+		Zadanie7();
 		break;
 	case 0:
 		return;
