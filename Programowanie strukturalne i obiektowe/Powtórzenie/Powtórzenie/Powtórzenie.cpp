@@ -11,7 +11,9 @@ void showMenu()
 	std::cout << "4. Zadanie 2\n";
 	std::cout << "5. Zadanie 3\n";
 	std::cout << "6. Zadanie 4\n";
-	std::cout << "7. Konwersja Liczb Na Binarne\n";
+	std::cout << "7. Konwersja liczb na binarne\n";
+	std::cout << "8. Konwersja liczb na osemkowy\n";
+	std::cout << "9. Konwersja liczb na szesnastkowy\n";
 	std::cout << "0. Zamknij program\n";
 }
 
@@ -187,6 +189,48 @@ void Zadanie7()
 	std::cout << "\n";
 }
 
+void Zadanie8()
+{
+	int number;
+	char znak;
+	std::cout << "Podaj liczbe to konwersji na system osemkowy: ";
+	std::cin >> number;
+	std::string	stringNumber;
+	do
+	{
+		int digit = number % 8;
+		number = number / 8;
+		znak = digit + 48;
+		stringNumber += znak;
+
+	} while (number != 0);
+	for (int i = stringNumber.length(); i >= 0; i--)
+		std::cout << stringNumber[i];
+	std::cout << "\n";
+}
+
+void Zadanie9()
+{
+	/*int number;
+	char znak;
+	std::cout << "Podaj liczbe to konwersji na system szesnastkowy: ";
+	std::cin >> number;
+	std::string	stringNumber;
+	std::string stringDigit;
+	do
+	{
+		[16]{"A, B, C, D, E, F, 1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9"};
+		int digit = number % 16;
+		number = number / 16;
+		znak = digit + 48;
+		stringNumber += znak;
+
+	} while (number != 0);
+	for (int i = stringNumber.length(); i >= 0; i--)
+		std::cout << stringNumber[i];
+	std::cout << "\n";
+	*/
+}
 
 void doSelectedTask(int& selectedOption)
 {
@@ -212,6 +256,12 @@ void doSelectedTask(int& selectedOption)
 		break;
 	case 7:
 		Zadanie7();
+		break;
+	case 8:
+		Zadanie8();
+		break;
+	case 9:
+		Zadanie9();
 		break;
 	case 0:
 		return;
