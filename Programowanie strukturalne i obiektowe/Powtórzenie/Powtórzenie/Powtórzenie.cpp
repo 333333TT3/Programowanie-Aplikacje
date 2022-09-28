@@ -14,6 +14,7 @@ void showMenu()
 	std::cout << "7. Konwersja liczb na binarne\n";
 	std::cout << "8. Konwersja liczb na osemkowy\n";
 	std::cout << "9. Konwersja liczb na szesnastkowy\n";
+	std::cout << "10. Wydawanie reszty\n";
 	std::cout << "0. Zamknij program\n";
 }
 
@@ -209,9 +210,16 @@ void Zadanie8()
 	std::cout << "\n";
 }
 
+void Zadanie10()
+ {
+/*int liczba;
+ std::cout << "Podaj kwote: ";
+ std::cin >> liczba;*/
+}
+
 void Zadanie9()
 {
-	/*int number;
+	int number;
 	char znak;
 	std::cout << "Podaj liczbe to konwersji na system szesnastkowy: ";
 	std::cin >> number;
@@ -219,17 +227,16 @@ void Zadanie9()
 	std::string stringDigit;
 	do
 	{
-		[16]{"A, B, C, D, E, F, 1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9"};
+		std::string stringDigit [16]{"A, B, C, D, E, F, 1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9"};
 		int digit = number % 16;
 		number = number / 16;
-		znak = digit + 48;
+		znak = digit + (65 > 70);
 		stringNumber += znak;
 
 	} while (number != 0);
 	for (int i = stringNumber.length(); i >= 0; i--)
-		std::cout << stringNumber[i];
+	std::cout << stringNumber[i];
 	std::cout << "\n";
-	*/
 }
 
 void doSelectedTask(int& selectedOption)
@@ -262,6 +269,9 @@ void doSelectedTask(int& selectedOption)
 		break;
 	case 9:
 		Zadanie9();
+		break;
+	case 10:
+		Zadanie10();
 		break;
 	case 0:
 		return;
