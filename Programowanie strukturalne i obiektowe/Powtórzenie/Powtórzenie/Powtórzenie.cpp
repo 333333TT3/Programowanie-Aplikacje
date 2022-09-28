@@ -230,7 +230,7 @@ void Zadanie9()
 		std::string stringDigit [16]{"A, B, C, D, E, F, 1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9"};
 		int digit = number % 16;
 		number = number / 16;
-		znak = digit + (65 > 70);
+		znak = digit + (65 != 70);
 		stringNumber += znak;
 
 	} while (number != 0);
