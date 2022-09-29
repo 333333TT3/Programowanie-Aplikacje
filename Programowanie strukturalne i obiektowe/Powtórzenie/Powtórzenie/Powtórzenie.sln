@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.32802.440
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Powtórzenie", "Powtórzenie.vcxproj", "{C923746C-0EBF-4285-8439-DAFB19525417}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "8.Struktury", "8.Struktury", "{6E680DD7-40DE-483F-BC56-F3CD6197AC18}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CoordinatesProgram", "..\CoordinatesProgram\CoordinatesProgram.vcxproj", "{180B10EA-CEEE-464A-B3B6-6B644FF7D5C0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,9 +25,20 @@ Global
 		{C923746C-0EBF-4285-8439-DAFB19525417}.Release|x64.Build.0 = Release|x64
 		{C923746C-0EBF-4285-8439-DAFB19525417}.Release|x86.ActiveCfg = Release|Win32
 		{C923746C-0EBF-4285-8439-DAFB19525417}.Release|x86.Build.0 = Release|Win32
+		{180B10EA-CEEE-464A-B3B6-6B644FF7D5C0}.Debug|x64.ActiveCfg = Debug|x64
+		{180B10EA-CEEE-464A-B3B6-6B644FF7D5C0}.Debug|x64.Build.0 = Debug|x64
+		{180B10EA-CEEE-464A-B3B6-6B644FF7D5C0}.Debug|x86.ActiveCfg = Debug|Win32
+		{180B10EA-CEEE-464A-B3B6-6B644FF7D5C0}.Debug|x86.Build.0 = Debug|Win32
+		{180B10EA-CEEE-464A-B3B6-6B644FF7D5C0}.Release|x64.ActiveCfg = Release|x64
+		{180B10EA-CEEE-464A-B3B6-6B644FF7D5C0}.Release|x64.Build.0 = Release|x64
+		{180B10EA-CEEE-464A-B3B6-6B644FF7D5C0}.Release|x86.ActiveCfg = Release|Win32
+		{180B10EA-CEEE-464A-B3B6-6B644FF7D5C0}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{180B10EA-CEEE-464A-B3B6-6B644FF7D5C0} = {6E680DD7-40DE-483F-BC56-F3CD6197AC18}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F052F6AC-37B1-4221-909C-B4131400DEF0}
