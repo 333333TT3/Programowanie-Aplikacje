@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 
 void showMenu()
 {
@@ -11,9 +10,10 @@ void showMenu()
 	std::cout << "4. Zadanie 2\n";
 	std::cout << "5. Zadanie 3\n";
 	std::cout << "6. Zadanie 4\n";
-	std::cout << "7. Konwersja liczb na binarne\n";
-	std::cout << "8. Konwersja liczb na osemkowy\n";
-	std::cout << "9. Konwersja liczb na dowolny system\n";
+	std::cout << "7. Zamiana na system binarny\n";
+	std::cout << "8. Zamiana na system 2-16\n";
+	std::cout << "9. Wydawanie reszty\n";
+
 	std::cout << "0. Zamknij program\n";
 }
 
@@ -66,7 +66,7 @@ void Zadanie1()
 
 void Zadanie2()
 {
-	std::cout << "Podaj liczbe liczb ciÄ…gu Fibonacciego:\n";
+	std::cout << "Podaj liczbe liczb ci¹gu Fibonacciego:\n";
 	int number;
 	std::cin >> number;
 
@@ -161,7 +161,7 @@ void Zadanie4()
 		int digit = number % 10;
 		number = number / 10;
 
-		stringNumber = arrayOfWordsNumbers[digit] + "" + stringNumber;
+		stringNumber = arrayOfWordsNumbers[digit] + " " + stringNumber;
 
 	} while (number != 0);
 
@@ -169,47 +169,29 @@ void Zadanie4()
 	std::cout << "\n";
 }
 
-void Zadanie7()
+void DecToBin()
 {
-	int number;
-	char znak;
-	std::cout << "Podaj liczbe to konwersji na system binarny: ";
-	std::cin >> number;
-	std::string	stringNumber;
-	do
-	{
-		int digit = number % 2;
-		number = number / 2;
-		znak = digit + 48;
-		stringNumber += znak;
+	std::cout << "Podaj liczbe w systemie dziesietnym:\n";
+	int decNumber;
+	std::cin >> decNumber;
 
-	} while (number != 0);
-	for (int i = stringNumber.length(); i >= 0; i--)
-		std::cout << stringNumber[i];
-	std::cout << "\n";
+	std::string binNumber = "";
+	int tmpDecNumber = decNumber;
+	while (tmpDecNumber != 0)
+	{
+		int divisionRest = tmpDecNumber % 2;
+		tmpDecNumber = tmpDecNumber / 2;
+		binNumber = (char)(divisionRest + 48) + binNumber;
+	}
+
+	if (binNumber == "")
+		binNumber = "0";
+
+	std::cout << "Liczba w systemie dziesietnym\t" << decNumber << "\n";
+	std::cout << "Liczba w systemie binarnym\t" << binNumber << "\n";
 }
 
-void Zadanie8()
-{
-	int number;
-	char znak;
-	std::cout << "Podaj liczbe to konwersji na system osemkowy: ";
-	std::cin >> number;
-	std::string	stringNumber;
-	do
-	{
-		int digit = number % 8;
-		number = number / 8;
-		znak = digit + 48;
-		stringNumber += znak;
-
-	} while (number != 0);
-	for (int i = stringNumber.length(); i >= 0; i--)
-		std::cout << stringNumber[i];
-	std::cout << "\n";
-}
-
-void Zadanie9()
+void DecToAnySystem()
 {
 	std::cout << "Podaj liczbe w systemie dziesietnym:\n";
 	int decNumber;
@@ -243,6 +225,41 @@ void Zadanie9()
 	std::cout << "Liczba w systemie " << targetSystem << "\t" << targetSystemNumber << "\n";
 }
 
+void GivingTheRest()
+{
+	std::cout << "Podaj kwote do wydania:\n";
+	float amount;
+	std::cin >> amount;
+
+	const int count = 17;
+	float tableOfDenominations[count] = {1000, 500, 200, 100, 50, 20, 10, 5, 2, 1, 0.50, 0.25, 0.20, 0.10, 0.05, 0.02, 0.01 };
+	int countOfDenominations[count];
+
+	for (int i = 0; i < count; i++)
+		countOfDenominations[i] = 0;
+
+	int actDenomination = 0;
+
+	float tmpAmount = amount;
+	while (tmpAmount > 0)
+	{
+		if (tmpAmount >= tableOfDenominations[actDenomination])
+		{
+			countOfDenominations[actDenomination]++;
+			//tmpAmount = tmpAmount - tableOfDenominations[actDenomination];
+			tmpAmount -= tableOfDenominations[actDenomination];
+		}
+		else
+			actDenomination++;
+	}
+
+	std::cout << "Kwota do wydania: " << amount << "\n";
+	for (int i = 0; i < count; i++)
+	{
+		std::cout << "Nominal " << tableOfDenominations[i] << " x " << countOfDenominations[i] << "\n";
+	}
+}
+
 void doSelectedTask(int& selectedOption)
 {
 	switch (selectedOption)
@@ -266,13 +283,13 @@ void doSelectedTask(int& selectedOption)
 		Zadanie4();
 		break;
 	case 7:
-		Zadanie7();
+		DecToBin();
 		break;
 	case 8:
-		Zadanie8();
+		DecToAnySystem();
 		break;
 	case 9:
-		Zadanie9();
+		GivingTheRest();
 		break;
 	case 0:
 		return;
@@ -304,10 +321,10 @@ void mainProgram()
 	int selected;
 	do
 	{
-		//1. wyÅ›wietlenie menu
+		//1. wyœwietlenie menu
 		showMenu();
 
-		//2. wybranie opcji przez uÅ¼ytkownika
+		//2. wybranie opcji przez u¿ytkownika
 		selected = chooseOptionFromUser();
 
 		//3. Wykonanie wybranego zadania
@@ -320,3 +337,4 @@ void main()
 {
 	mainProgram();
 }
+

@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{180b10ea-ceee-464a-b3b6-6b644ff7d5c0}</ProjectGuid>
-    <RootNamespace>CoordinatesProgram</RootNamespace>
+    <ProjectGuid>{5b33e74d-b54a-4695-bc95-942dc58198b3}</ProjectGuid>
+    <RootNamespace>Powtorzenie</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CoordinatesProgram.cpp" />
+    <ClCompile Include="Powtorzenie.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
