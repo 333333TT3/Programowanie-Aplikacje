@@ -57,3 +57,30 @@ int main()
     system("COLOR E5");
     CoordinateTestVersion2();
 }
+
+std::string name;
+std::string surname;
+int age;
+int heigth;
+
+struct Pearson 
+{
+    std::string name;
+    std::string surname;
+    int age;
+    int heigth;
+    //int x, y, z;
+    Point coordinate;
+};
+
+Pearson p1;
+//p1.name
+//p1.coordinate.x = 5;
+
+std::string nameTab[5];
+std::string surnameTab[5];
+int ageTab[5];
+int heigthTab[5];
+
+Pearson pTab[5];
+//pTab[1].name = "Ala";
