@@ -19,7 +19,7 @@ void TestFunction()
 
 int main()
 {
-    system("COLOR E5");
+    system("cyan");
     /*int localVariableInMain = 8;
     globalVariable = 77;
     TestFunction();*/

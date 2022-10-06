@@ -54,8 +54,7 @@ void CoordinateTestVersion2()
 
 int main()
 {
-    system("COLOR E5");
-    CoordinateTestVersion2();
+  CoordinateTestVersion2();
 }
 
 std::string name;
