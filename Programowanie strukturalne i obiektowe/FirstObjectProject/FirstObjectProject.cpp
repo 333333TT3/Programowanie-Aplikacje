@@ -16,13 +16,13 @@ public:
     void SetX(int a)
     {
         if (a >= 0)
-            x = a;
+            this->x = x;
     }
 
     void SetY(int a)
     {
         if (a >= 0)
-            y = a;
+            this->y = y;
     }
 
 protected:
