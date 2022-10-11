@@ -50,7 +50,7 @@ int main()
     std::cin >> x;
 
     int y;
-    std::cout << "Podaj x: \n";
+    std::cout << "Podaj y: \n";
     std::cin >> y;
 
     Point point2;
