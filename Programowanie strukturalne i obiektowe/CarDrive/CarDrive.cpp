@@ -43,7 +43,6 @@ void MoveForward()
 
 protected:
 
-
 private:
 	std::string name;
 	CoordinateGPS CoordinateGPS;
