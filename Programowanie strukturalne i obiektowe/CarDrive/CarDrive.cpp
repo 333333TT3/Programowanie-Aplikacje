@@ -14,6 +14,8 @@ public:
 		this->name = name;
 		CoordinateGPS.x = 0;
 		CoordinateGPS.y = 0;
+		directionX = 1;
+		directionY = 0;
 	}
 
 	Car(std::string name, int x, int y)
@@ -21,6 +23,8 @@ public:
 		this->name = name;
 		CoordinateGPS.x = 0;
 		CoordinateGPS.y = 0;
+		directionX = 1;
+		directionY = 0;
 	}
 
 	void ShowInfo()
@@ -31,10 +35,11 @@ public:
 		std::cout << "********************************************\n";
 	}
 
-	void MoveForward()
-	{
-
-	}
+void MoveForward()
+{
+	CoordinateGPS.x += directionX;
+	CoordinateGPS.y += directionY;
+}
 
 protected:
 
@@ -42,6 +47,8 @@ protected:
 private:
 	std::string name;
 	CoordinateGPS CoordinateGPS;
+
+	int directionX, directionY;
 };
 
 int main()
@@ -51,4 +58,6 @@ int main()
 
 	carFirst.ShowInfo();
 	carSecond.ShowInfo();
+
+	carFirst.MoveForward();
 }
