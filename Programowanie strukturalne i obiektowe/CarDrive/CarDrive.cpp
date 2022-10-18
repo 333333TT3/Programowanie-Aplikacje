@@ -12,8 +12,10 @@ struct Direction
 
 class Car
 {
-
 public:
+
+#pragma region Konstruktory
+
 	Car(std::string name)
 	{
 		this->name = name;
@@ -32,6 +34,8 @@ public:
 		direction.y = 0;
 	}
 
+#pragma endregion Turn method
+
 	void ShowInfo()
 	{
 		std::cout << "********************************************\n";
@@ -40,13 +44,13 @@ public:
 		std::cout << "********************************************\n";
 	}
 
-void MoveForward()
+    void MoveForward()
 {
 	CoordinateGPS.x += direction.x;
 	CoordinateGPS.y += direction.y;
 }
 
-void TurnLeft()
+    void TurnLeft()
 {
 	/*if (direction.x == 1 && direction.y == 0)
 	{
