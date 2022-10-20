@@ -28,8 +28,8 @@ public:
 	Car(std::string name, int x, int y)
 	{
 		this->name = name;
-		CoordinateGPS.x = 0;
-		CoordinateGPS.y = 0;
+		CoordinateGPS.x = x;
+		CoordinateGPS.y = y;
 		direction.x = 1;
 		direction.y = 0;
 	}
