@@ -7,14 +7,14 @@ Dodanie konstruktorów umo¿liwiaj¹cych utworzenie obiektu na kilka sposobów.
 Metoda która wyœwietli informacje o osobie.
 Metoda która wyœwietli czy osoba jest pe³noletnia czy nie.*/
 
-class Pearson
+class Person
 {
 public:
-    Pearson()
+    Person()
     {
         name = "x";
         surname = "y";
-        heigth = 170;
+        heigth = 172;
         weigth = 60;
         time_t now = time(0);
         tm* ltm = new tm;
@@ -22,13 +22,49 @@ public:
         yearOfBirth = 1900 + ltm->tm_year;
     }
 
+    int firstPerson()
+    {
+        std::string name;
+        std::string surname;
+        int age;
+        int heigth;
+        int weigth;
+        int yearOfBirth;
+    }
+
     void BusinessCard()
     {
-        std::cout << "*********************************************************\n";
-        std::cout << "Imie: (" << name << " Nazwisko: " << surname << ")\n";
-        std::cout << "Wzrost: (" << heigth << " Waga: " << weigth << ")\n";
-        std::cout << "Wiek " << adult << "\n";
-        std::cout << "*********************************************************\n";
+        time_t now = time(0);
+        tm* ltm = new tm;
+        localtime_s(ltm, &now);
+        //yearOfBirth = 1900 + ltm->tm_year;
+
+        std::cout << "**********************************************************\n";
+        std::cout << "(""Imie: " << name << " Nazwisko: " << surname << ")\n";
+        std::cout << "(""Wzrost: " << heigth << " Waga: " << weigth << ")\n";
+        std::cout << "Wiek " << &now <<"\n";
+        std::cout << "**********************************************************\n";
+        std::cout << "\n";
+    }
+
+    void LegalAge()
+    {
+        int age;
+
+        time_t now = time(0);
+        tm* ltm = new tm;
+        localtime_s(ltm, &now);
+
+        age = 1900 + ltm->tm_year - yearOfBirth;
+
+        std::cout << "**********************************************************\n";
+        if (age > 18)
+        {
+            std::cout << "Osoba jest pelnoletnia";
+        }
+        else
+            std::cout << "Osoba jest niepelnoletnia\n";
+        std::cout << "**********************************************************\n";
     }
 
 private:
@@ -38,22 +74,36 @@ private:
     int weigth;
     int yearOfBirth;
 protected:
+
 };
 
 int main()
 {
+    Person firstPerson;
+    firstPerson.BusinessCard();
+    firstPerson.LegalAge();
+
+/*std::string name;
+std::string surname;
+int age;
+int heigth;
+int weigth;
+int DateOfBirth;
+
+
+    if (age > 18)
+    {
+        std::cout << "Osoba jest pelnoletnia";
+    }
+    else
+    {
+        std::cout << "Osoba jest niepelnoletnia";
+    }
 
     time_t now = time(0);
     tm* ltm = new tm;
     localtime_s(ltm, &now);
     bool adult = 1900 + ltm->tm_year;
-
-
-    std::string name;
-    std::string surname;
-    int heigth;
-    int weigth;
-    int DateOfBirth;
 
     std::cout << "Podaj imie: ";
     std::cin >> name;
@@ -66,12 +116,12 @@ int main()
     std::cout << "Podaj rok urodzenia: ";
     std::cin >> DateOfBirth;
 
-    time_t now = time(0);
+    now = time(0);
 
     std::cout << "Number of second since January 1st 1970 is: "
         << now << std::endl;
 
-    tm* ltm = new tm;
+    ltm = new tm;
     localtime_s(ltm, &now);
 
     std::cout << "Year:" << 1900 + ltm->tm_year << std::endl;
@@ -82,4 +132,5 @@ int main()
     std::cout << ltm->tm_min << ":";
     std::cout << ltm->tm_sec << std::endl;
     delete ltm;
+    */
 }
