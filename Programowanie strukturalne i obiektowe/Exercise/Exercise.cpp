@@ -12,8 +12,8 @@ class Person
 public:
     Person()
     {
-        name = "x";
-        surname = "y";
+        name = "Pawel";
+        surname = "Nowak";
         heigth = 172;
         weigth = 60;
         time_t now = time(0);
@@ -58,9 +58,10 @@ public:
         age = 1900 + ltm->tm_year - yearOfBirth;
 
         std::cout << "**********************************************************\n";
-        if (age > 18)
+        if (age < 18)
         {
             std::cout << "Osoba jest pelnoletnia";
+            std::cout << "\n";
         }
         else
             std::cout << "Osoba jest niepelnoletnia\n";
