@@ -24,7 +24,15 @@ namespace FIRST_Console_app
                 this.name = name;
                 this.surname = surname;
                 this.age = age;
-
             }
+
+        public void ShowInfo()
+        {
+            Console.WriteLine("Informacja o osobie: ");
+            Console.WriteLine($"Imię {name}");
+            Console.WriteLine($"Nazwisko {surname}");
+            Console.WriteLine($"Wiek {age}");
+        }
+
     }
 }

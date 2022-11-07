@@ -33,6 +33,28 @@ namespace FIRST_Console_app
 
                 int number2 = number + 6;
             }
-        }
-    }
-}
+
+       namespace FirstObjectConsoleApp
+       { 
+          class Program
+          {
+
+             static void Main(string[] args)
+             {
+
+                int x;
+                x = 15;
+
+                Person p;
+                p = new Person();
+                p.ShowInfo();
+
+             }
+
+          }
+
+       }
+            
+    
+}      
+
