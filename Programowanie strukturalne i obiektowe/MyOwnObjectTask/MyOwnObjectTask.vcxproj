@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{1d534abd-41d9-4331-be4f-6277df6dd5ab}</ProjectGuid>
-    <RootNamespace>PointersApp</RootNamespace>
+    <ProjectGuid>{44d8a73d-f863-4656-ab80-e20b0d39f5ed}</ProjectGuid>
+    <RootNamespace>MyOwnObjectTask</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="PointersApp.cpp" />
+    <ClCompile Include="MyOwnObjectTask.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

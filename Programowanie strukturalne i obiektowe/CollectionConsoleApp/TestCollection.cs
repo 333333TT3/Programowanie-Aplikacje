@@ -8,24 +8,50 @@ namespace CollectionConsoleApp
 {
     class TestCollection
     {
-        public void TestArrayClollection()
+        public void TestArrayCollection()
         {
-            int[] arrayOfNumber = new int[15];
-            arrayOfNumber[5] = 2137;
+            /*
+            C++:
+            typ nazwa[rozmiar];
+
+            int tab1[5];
+
+            tab1[2] = 2137;
+
+            const int rozmiar = 19;
+            //rozmiar = 17;
+            int tab2[rozmiar];
+            for (int i = 0; i < rozmiar; i++)
+            {
+
+            }
+            */
+            int[] arrayOfNumbers = new int[10];
+            arrayOfNumbers[5] = 2137;
 
             Random random = new Random();
-            for (int i = 0; i < arrayOfNumber.Length; i++)
+            for (int i = 0; i < arrayOfNumbers.Length; i++)
             {
-                arrayOfNumber[i] = random.Next();
+                arrayOfNumbers[i] = random.Next() % 100;
             }
 
-            foreach (int item in arrayOfNumber)
+            /*
+            for (int i = 0; i < arrayOfNumbers.Length; i++)
+            {
+                Console.Write(arrayOfNumbers[i] + ", ");
+            }
+            */
+
+            Console.WriteLine("Liczby w tablicy:");
+            foreach (int item in arrayOfNumbers)
             {
                 Console.Write(item + ", ");
+                //item = 5;
             }
-            int max = arrayOfNumber[5];
+            Console.WriteLine();
 
-            foreach (int number in arrayOfNumber)
+            int max = arrayOfNumbers[0];
+            foreach (int number in arrayOfNumbers)
             {
                 if (number > max)
                     max = number;
@@ -36,6 +62,7 @@ namespace CollectionConsoleApp
         public void TestObjectArrayCollection()
         {
             Number[] arrayWidthObjectNumbers = new Number[5];
+            //arrayWidthObjectNumbers[2].ourNumber = 7;
 
             Random random = new Random();
             for (int i = 0; i < arrayWidthObjectNumbers.Length; i++)
@@ -46,7 +73,9 @@ namespace CollectionConsoleApp
 
             foreach (Number number in arrayWidthObjectNumbers)
             {
-                Console.Write($"{number.ourNumber}, ");
+                Console.Write($"{number.ourNumber} ,");
+                //number = new Number();
+                number.ourNumber = 7;
             }
 
             int max = arrayWidthObjectNumbers[0].ourNumber;
@@ -55,12 +84,33 @@ namespace CollectionConsoleApp
                 if (number.ourNumber > max)
                     max = number.ourNumber;
             }
-            Console.WriteLine("\n Max w tablicy to: " + max);
+            Console.WriteLine("Max w tablicy to: " + max);
         }
+
+        public void TestGeneric()
+        {
+
+        }
+
     }
 
     class Number
     {
         public int ourNumber;
+    }
+
+    class NumberFloat
+    {
+        public float ourNumber;
+    }
+
+    class NumberDouble
+    {
+        public double ourNumber;
+    }
+
+    class Number<T>
+    {
+        public T ourNumber;
     }
 }

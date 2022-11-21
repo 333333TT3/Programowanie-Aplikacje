@@ -7,7 +7,7 @@ namespace CollectionConsoleApp
         static void Main(string[] args)
         {
             TestCollection testCollection = new TestCollection();
-            //testCollection.TestArratCollection();
+            //testCollection.TestArrayCollection();
             testCollection.TestObjectArrayCollection();
         }
     }
