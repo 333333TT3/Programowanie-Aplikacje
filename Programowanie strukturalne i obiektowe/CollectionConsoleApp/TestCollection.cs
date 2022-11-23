@@ -89,7 +89,14 @@ namespace CollectionConsoleApp
 
         public void TestGeneric()
         {
+            Number[] numbers = new Number[5];
+            NumberFloat[] floatnumbers = new NumberFloat[5];
+            NumberDouble[] doublenumbers = new NumberDouble[5];
 
+            NumberGeneric<int>[] intGenericNumber = new NumberGeneric<int>[5];
+            NumberGeneric<float>[] floatGenericNumber = new NumberGeneric<float>[5];
+            NumberGeneric<double>[] doubleGenericNumber = new NumberGeneric<double>[5];
+            NumberGeneric<byte>[] byteGenericNumber = new NumberGeneric<byte>[5];
         }
 
     }
@@ -109,7 +116,7 @@ namespace CollectionConsoleApp
         public double ourNumber;
     }
 
-    class Number<T>
+    class NumberGeneric<T>
     {
         public T ourNumber;
     }
