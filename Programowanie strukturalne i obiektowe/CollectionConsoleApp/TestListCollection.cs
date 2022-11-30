@@ -24,26 +24,28 @@ namespace CollectionConsoleApp
             }
             Console.WriteLine();
 
-            List<double> listOfFDoubles = new List<double>();
+            List<double> listOfDoubles = new List<double>();
             for (int i = 0; i < 5; i++)
             {
                 double number = random.NextDouble() * 10 + 1;
                 number = Math.Round(number, 4);
 
-                listOfFDoubles.Add(number);
+                listOfDoubles.Add(number);
 
             }
             Console.WriteLine("Lista doubl'ow:");
-            foreach (double element in listOfFDoubles)
+            foreach (double element in listOfDoubles)
             {
                 Console.Write(element + ", ");
             }
             Console.WriteLine();
 
-            int max = MaxFromInts(listOfInts);
+            //int max = MaxFromInts(listOfInts);
+            int max = MaxFromAllTypes<int>(listOfInts);
             Console.WriteLine("Max w liscie int'ow: " + max);
 
-            int maxDouble = MaxFromInts(listOfDoubles);
+            //double maxDouble = MaxFromDoubles(listOfFDoubles);
+            double maxDouble = MaxFromAllTypes<double>(listOfDoubles);
             Console.WriteLine("Max w liscie doubl'ow: " + maxDouble);
 
         }
@@ -52,6 +54,26 @@ namespace CollectionConsoleApp
         {
             int max = list[0];
             foreach (int item in list)
+            {
+                if (item > max)
+                    max = item;
+            }
+            return max;
+        }
+        private double MaxFromDoubles(List<double> list)
+        {
+            double max = list[0];
+            foreach (double item in list)
+            {
+                if (item > max)
+                    max = item;
+            }
+            return max;
+        }
+        private T MaxFromAllTypes<T>(List<T> list)
+        {
+            T max = list[0];
+            foreach (T item in list)
             {
                 if (item > max)
                     max = item;
