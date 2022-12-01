@@ -41,11 +41,11 @@ namespace CollectionConsoleApp
             Console.WriteLine();
 
             //int max = MaxFromInts(listOfInts);
-            int max = MaxFromAllTypes<int>(listOfInts);
+            int max = MaxFromAllTypes<int>(listOfInts, CheckInt);
             Console.WriteLine("Max w liscie int'ow: " + max);
 
             //double maxDouble = MaxFromDoubles(listOfFDoubles);
-            double maxDouble = MaxFromAllTypes<double>(listOfDoubles);
+            double maxDouble = MaxFromAllTypes<double>(listOfDoubles, CheckDouble);
             Console.WriteLine("Max w liscie doubl'ow: " + maxDouble);
 
         }
@@ -60,25 +60,62 @@ namespace CollectionConsoleApp
             }
             return max;
         }
-        private double MaxFromDoubles(List<double> list)
-        {
-            double max = list[0];
-            foreach (double item in list)
-            {
-                if (item > max)
-                    max = item;
-            }
-            return max;
-        }
-        private T MaxFromAllTypes<T>(List<T> list)
+        /*
+        private T MaxFromAllTypes<T>(List<T> list, Func<T, T, bool> check)
         {
             T max = list[0];
             foreach (T item in list)
             {
-                if (item > max)
+                if (check(item, max))
                     max = item;
             }
             return max;
         }
+        */
+        private T MaxFromAllTypes<T>(List<T> list, Func<T, T, bool> check)
+        {
+            T max = list[0];
+            foreach (T item in list)
+            {
+                /* if (item is int)
+                 {
+                     if (CheckInt(int.Parse(item.ToString()), int.Parse(max.ToString())))
+                         max = item;
+                 }
+                 if (item is double)
+                 {
+                     if (CheckDouble(double.Parse(item.ToString()), double.Parse(max.ToString())))
+                         max = item;
+                 }
+                 if(item is Person)
+                   {
+                   (CheckPerson(item as Person, max as Person)
+                   max = item;
+                   } 
+
+                if (item > max)
+                max = item;
+                */
+
+                if (check(item, max))
+                    max = item;
+            }
+            return max;
+        }
+        private bool CheckInt(double firstNumber, double secondNumber)
+        {
+            return firstNumber > secondNumber;
+        }
+
+        private bool CheckDouble(double firstNumber, double secondNumber)
+        {
+            return firstNumber > secondNumber;
+        }
+        /*
+         private Person CheckPerson(Person firstPerson, Person secondPerson)
+          {
+          return firstPerson.age > secondPerson.age;
+          }
+         */
     }
 }
