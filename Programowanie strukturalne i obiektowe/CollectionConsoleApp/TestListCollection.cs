@@ -41,11 +41,16 @@ namespace CollectionConsoleApp
             Console.WriteLine();
 
             //int max = MaxFromInts(listOfInts);
-            int max = MaxFromAllTypes<int>(listOfInts, CheckInt);
+            //int max = MaxFromAllTypes<int>(listOfInts, CheckInt);
+            int max = MaxFromAllTypes<int>(listOfInts,
+                (int firstNumber, int secondNumber) =>
+                {
+                    return firstNumber > secondNumber;
+                });
             Console.WriteLine("Max w liscie int'ow: " + max);
 
             //double maxDouble = MaxFromDoubles(listOfFDoubles);
-            double maxDouble = MaxFromAllTypes<double>(listOfDoubles, CheckDouble);
+            double maxDouble = MaxFromAllTypes<double>(listOfDoubles, (double firstNumber, double secondNumber ) => firstNumber > secondNumber);
             Console.WriteLine("Max w liscie doubl'ow: " + maxDouble);
 
         }
@@ -70,8 +75,7 @@ namespace CollectionConsoleApp
                     max = item;
             }
             return max;
-        }
-        */
+        } */
         private T MaxFromAllTypes<T>(List<T> list, Func<T, T, bool> check)
         {
             T max = list[0];
@@ -102,7 +106,7 @@ namespace CollectionConsoleApp
             }
             return max;
         }
-        private bool CheckInt(double firstNumber, double secondNumber)
+        private bool CheckInt(int firstNumber, int secondNumber)
         {
             return firstNumber > secondNumber;
         }
