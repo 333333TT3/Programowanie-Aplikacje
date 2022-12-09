@@ -12,7 +12,7 @@ namespace CollectionConsoleApp
         {
             List<Person> listOfPeople = new List<Person>();
 
-            Person person = new Person("Jan", "Kowalski", 40);
+            Person person = new Person("Jan", "Kowalski", 10);
             listOfPeople.Add(person);
 
             listOfPeople.Add(new Person("Ewa", "Nowak", 36));
@@ -24,9 +24,15 @@ namespace CollectionConsoleApp
             {
                 p.Info();
             }
+            Console.WriteLine();
 
             List<Person> listofPeoplePegi18;
 
+            /*
+             select *
+            from listOfPeople
+            where age >= 18
+             */
             listofPeoplePegi18 = listOfPeople.Where(x => x.age >= 18).ToList();
 
             Console.WriteLine("Lista osób pełnoletnich");
@@ -34,9 +40,22 @@ namespace CollectionConsoleApp
             {
                 p.Info();
             }
+            Console.WriteLine();
 
+            /*
+            select *
+            from listOfPeople
+            order by age 
+             */
+
+            //List<Person> sortedListByAge = listOfPeople.OrderBy(x => x.age).ToList();
+            List<Person> sortedListByAge = listOfPeople.OrderByDescending(x => x.age).ToList();
+            Console.WriteLine("Lista osób posortowana według wieku malejąco");
+            foreach (Person p in sortedListByAge)
+            {
+                p.Info();
+            }
+            Console.WriteLine();
         }
-
-
     }
 }
