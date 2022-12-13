@@ -12,12 +12,12 @@ namespace CollectionConsoleApp
         {
             List<Person> listOfPeople = new List<Person>();
 
-            Person person = new Person("Jan", "Kowalski", 10);
+            Person person = new Person("Jan", "Kowalski", 10, 170);
             listOfPeople.Add(person);
 
-            listOfPeople.Add(new Person("Ewa", "Nowak", 36));
-            listOfPeople.Add(new Person("Paweł", "Nieznany", 15));
-            listOfPeople.Add(new Person("Bez", "Imienny", 14));
+            listOfPeople.Add(new Person("Ewa", "Nowak", 15, 150));
+            listOfPeople.Add(new Person("Paweł", "Nieznany", 15, 120));
+            listOfPeople.Add(new Person("Bez", "Imienny", 14, 180));
 
             Console.WriteLine("Lista wszystkich osób");
             foreach (Person p in listOfPeople)
@@ -42,20 +42,31 @@ namespace CollectionConsoleApp
             }
             Console.WriteLine();
 
-            /*
-            select *
-            from listOfPeople
-            order by age 
-             */
-
             //List<Person> sortedListByAge = listOfPeople.OrderBy(x => x.age).ToList();
-            List<Person> sortedListByAge = listOfPeople.OrderByDescending(x => x.age).ToList();
-            Console.WriteLine("Lista osób posortowana według wieku malejąco");
-            foreach (Person p in sortedListByAge)
+            List<Person> sortedListByAgeAndHeight = listOfPeople.OrderByDescending(x => x.age)
+                .ThenBy(x => x.height)
+                //.OrderBy(x => x.height)
+                .ToList();
+            Console.WriteLine("Lista osób posortowana według wieku malejąco i wzrostu");
+            foreach (Person p in sortedListByAgeAndHeight)
             {
                 p.Info();
             }
             Console.WriteLine();
+
+            List<Person> sortedListByName = listOfPeople.OrderBy(x => x.name).ToList();
+            Console.WriteLine("Lista osób posortowana według imienia");
+            foreach (Person p in sortedListByName)
+            {
+                p.Info();
+            }
+            Console.WriteLine();
+
+            int age = listOfPeople.Min(x => x.age);
+            Console.WriteLine("Najmłotsza osoba ma wiek: " + age);
+
+            bool isLegalAge = listOfPeople.All(x => x.age < 18);
+            Console.WriteLine("Czy wszystkie osoby są pełnoletnie " + isLegalAge);
         }
     }
 }
