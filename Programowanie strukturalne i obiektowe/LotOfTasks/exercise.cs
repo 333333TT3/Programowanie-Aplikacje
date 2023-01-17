@@ -351,18 +351,18 @@ namespace LotOfTasks
             Console.WriteLine(equation);
          }
 
-        /*
          public void Exercise8_FOR()
         {
-            for (int f = 0; f <= 20; f--)
-            {
-                for (int n = 1; n <= 20; n++)
-                {
-                   f(n) = f(n - 2) + f(n - 1);
-                }
-            }
+            int equation = 1;
+            int equation2 = 1;
+
+           for (int equation = 1; equation <= 20; equation++)
+           {
+                equation + equation2;
+           }
+           Console.WriteLine();
         }
-       */
+
         public void Exercise9_FOR()
         {
             for (int i = 0; i <= 10; i++)
@@ -387,7 +387,6 @@ namespace LotOfTasks
         }
     }
 }
-
 
 /*
  Podstawy programowania:
