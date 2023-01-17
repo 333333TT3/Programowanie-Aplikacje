@@ -345,22 +345,26 @@ namespace LotOfTasks
          {
             int equation = 1;
             for (int i = 1; i <= 10; i++)
-             {
+            {
                 equation *= 2;
-             }
+            }
             Console.WriteLine(equation);
          }
 
          public void Exercise8_FOR()
         {
-            int equation = 1;
-            int equation2 = 1;
+            int firstnumber = -1;
+            int secondnumber = 1;
 
-           for (int equation = 1; equation <= 20; equation++)
+           for (int i = 0; i < 20; i++)
            {
-                equation + equation2;
-           }
-           Console.WriteLine();
+                int equation = firstnumber + secondnumber;
+
+                firstnumber = secondnumber;
+                secondnumber = equation;
+
+                Console.WriteLine(secondnumber);
+            }
         }
 
         public void Exercise9_FOR()

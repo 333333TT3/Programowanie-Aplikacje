@@ -28,8 +28,8 @@ namespace LotOfTasks
             //exercise.Exercise4_FOR();
             //exercise.Exercise5_FOR();
             //exercise.Exercise6_FOR();
-            exercise.Exercise7_FOR();
-            //exercise.Exercise8_FOR();
+            //exercise.Exercise7_FOR();
+            exercise.Exercise8_FOR();
             //exercise.Exercise9_FOR();
 
 
