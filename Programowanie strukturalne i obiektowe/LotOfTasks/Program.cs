@@ -29,10 +29,10 @@ namespace LotOfTasks
             //exercise.Exercise5_FOR();
             //exercise.Exercise6_FOR();
             //exercise.Exercise7_FOR();
-            exercise.Exercise8_FOR();
+            //exercise.Exercise8_FOR();
             //exercise.Exercise9_FOR();
-
-
+            //exercise.Exercise1_DO_WHILE();
+            exercise.Exercise2_DO_WHILE();
 
             /*
             Console.WriteLine("Podaj liczbę:");

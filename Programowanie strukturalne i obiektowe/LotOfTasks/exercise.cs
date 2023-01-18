@@ -341,23 +341,23 @@ namespace LotOfTasks
             }
         }
 
-         public void Exercise7_FOR()
-         {
+        public void Exercise7_FOR()
+        {
             int equation = 1;
             for (int i = 1; i <= 10; i++)
             {
                 equation *= 2;
             }
             Console.WriteLine(equation);
-         }
+        }
 
-         public void Exercise8_FOR()
+        public void Exercise8_FOR()
         {
             int firstnumber = -1;
             int secondnumber = 1;
 
-           for (int i = 0; i < 20; i++)
-           {
+            for (int i = 0; i < 20; i++)
+            {
                 int equation = firstnumber + secondnumber;
 
                 firstnumber = secondnumber;
@@ -384,10 +384,40 @@ namespace LotOfTasks
             {
                 a *= 2;
                 Console.WriteLine("2^" + i + "=" + a);
-                
+
                 //Console.WriteLine(a);
                 //a *= 2;
             }
+        }
+        public void Exercise1_DO_WHILE()
+        {
+            Console.WriteLine("Podaj hasło: ");
+            string password = Console.ReadLine();
+            do
+            {
+                Console.WriteLine("Hasło prawidlowe");
+
+            } while (password == "abc123");
+
+            do
+            {
+                Console.WriteLine("Hasło nieprawidlowe");
+
+            } while (password != "abc123");
+        }
+        public void Exercise2_DO_WHILE()
+        {
+            int i;
+            for (i = 1; i <= 10; i++)
+            {
+                Console.WriteLine((i * i) + "\n");
+            }
+
+            do
+            {
+                Console.WriteLine(i * i + i + i);
+            } while ((i + i) <= 1000);
+
         }
     }
 }
