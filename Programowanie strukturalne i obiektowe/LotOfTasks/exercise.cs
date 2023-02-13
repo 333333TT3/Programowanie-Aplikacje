@@ -417,7 +417,67 @@ namespace LotOfTasks
             {
                 Console.WriteLine(i * i + i + i);
             } while ((i + i) <= 1000);
+        }
+        public void Exercise1_LOOP()
+        {
+            Console.WriteLine("Podaj liczbe do sprawdzenia:");
+            string check_number = Console.ReadLine();
+            int number = int.Parse(check_number);
+            do
+            {
 
+
+            } while (number - 1 >= 2);
+            Console.WriteLine("Liczba jest liczba pierwsza");
+        }
+
+        public void BMI_calculator()
+        {
+            Console.WriteLine("Podaj wage: (kg)");
+            string check_weight = Console.ReadLine();
+            int weight = int.Parse(check_weight);
+
+            Console.WriteLine("Podaj wzrost: ");
+            string check_height = Console.ReadLine();
+            float height = float.Parse(check_height);
+
+            var BMI = (weight / (height * height));
+            var BMI2 = (BMI * 10000);
+
+            Console.WriteLine(BMI2);
+
+            if (BMI2 < 16)
+            {
+                Console.WriteLine("Wyglodzenie");
+            }
+            else if (BMI2 >= 16 && BMI2 < 17)
+            {
+                Console.WriteLine("Wychudniecie");
+            }
+            else if (BMI2 > 17 && BMI2 < 18.5)
+            {
+                Console.WriteLine("Niedowaga");
+            }
+            else if (BMI2 >= 18.5 && BMI2 <= 25)
+            {
+                Console.WriteLine("Waga prawidlowa");
+            }
+            else if (BMI2 > 25 && BMI2 <= 30)
+            {
+                Console.WriteLine("Nadwaga");
+            }
+            else if (BMI2 > 30 && BMI2 <= 35)
+            {
+                Console.WriteLine("Otylosc I stopnia");
+            }
+            else if (BMI2 > 35 && BMI2 <= 40)
+            {
+                Console.WriteLine("Otylosc II stopnia");
+            }
+            else if (BMI2 > 40)
+            {
+                Console.WriteLine("III stopien otylosci");
+            }
         }
     }
 }

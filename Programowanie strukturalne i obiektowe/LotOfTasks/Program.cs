@@ -32,7 +32,10 @@ namespace LotOfTasks
             //exercise.Exercise8_FOR();
             //exercise.Exercise9_FOR();
             //exercise.Exercise1_DO_WHILE();
-            exercise.Exercise2_DO_WHILE();
+            //exercise.Exercise2_DO_WHILE();
+            //exercise.Exercise1_LOOP();
+            exercise.BMI_calculator();
+
 
             /*
             Console.WriteLine("Podaj liczbę:");
