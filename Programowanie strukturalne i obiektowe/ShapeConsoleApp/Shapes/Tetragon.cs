@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ShapeConsoleApp.Shapes
 {
-    class Tetragon
+    class Tetragon : Object
     {
         protected double sideA;
         protected double sideB;
@@ -14,7 +14,7 @@ namespace ShapeConsoleApp.Shapes
         protected double sideD;
         protected string name;
 
-        public Tetragon(string name, double sideA, double sideB, double sideC, double sideD)
+        public Tetragon(string name, double sideA, double sideB, double sideC, double sideD) : base()
         {
             this.sideA = Math.Abs(sideA);
             this.sideB = Math.Abs(sideB);
@@ -23,7 +23,7 @@ namespace ShapeConsoleApp.Shapes
             this.name = name;
         }
 
-        public double Area()
+        public virtual double Area()
         {
             return -1;
         }

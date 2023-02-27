@@ -16,7 +16,7 @@ namespace ShapeConsoleApp.Shapes
             this.height = height;
         }
 
-        public new double Area()
+        public override double Area()
         {
             return (sideA + sideC) * height / 2;
         }

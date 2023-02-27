@@ -10,9 +10,10 @@ namespace ShapeConsoleApp.Shapes
 
         public Rectangle(string name, double sideA, double sideB) : base(name, sideA, sideB, sideA, sideB)
         {
+
         }
 
-        public new double Area()
+        public override double Area()
         {
             return sideA * sideB;
         }

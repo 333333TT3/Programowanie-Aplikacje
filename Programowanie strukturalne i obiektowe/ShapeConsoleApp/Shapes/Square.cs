@@ -15,6 +15,7 @@ namespace ShapeConsoleApp.Shapes
 
         public Square(string name, double sideA) : base (name, sideA, sideA)
         {
+
         }
     }
 }
