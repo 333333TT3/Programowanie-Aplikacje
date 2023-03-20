@@ -41,7 +41,7 @@ namespace PropertiesApp
         {
             name = "Jan";
             surname = "Kowalski";
-            Age = 26;
+            Age = 25;
         }
 
         public void SetAge(int age)
