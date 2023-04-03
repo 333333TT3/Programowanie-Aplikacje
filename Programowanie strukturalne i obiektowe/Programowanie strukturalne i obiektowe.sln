@@ -97,7 +97,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PolimorfizmApp", "Polimorfi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "08. Baza danych", "08. Baza danych", "{1D2721B3-696A-4B07-8319-831F1D73F548}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolApp", "SchoolApp\SchoolApp.csproj", "{EF8772F5-4575-49A4-B3F2-F5A782080213}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolApp", "SchoolApp\SchoolApp.csproj", "{EF8772F5-4575-49A4-B3F2-F5A782080213}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,7 +111,6 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{0B07B802-470B-4138-B230-2B10985A7182}.Debug|Any CPU.ActiveCfg = Debug|Win32
 		{0B07B802-470B-4138-B230-2B10985A7182}.Debug|x64.ActiveCfg = Debug|x64
-		{0B07B802-470B-4138-B230-2B10985A7182}.Debug|x64.Build.0 = Debug|x64
 		{0B07B802-470B-4138-B230-2B10985A7182}.Debug|x86.ActiveCfg = Debug|Win32
 		{0B07B802-470B-4138-B230-2B10985A7182}.Release|Any CPU.ActiveCfg = Release|Win32
 		{0B07B802-470B-4138-B230-2B10985A7182}.Release|x64.ActiveCfg = Release|x64

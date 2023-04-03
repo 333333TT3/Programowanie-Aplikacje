@@ -1,5 +1,5 @@
 
-Priorytety:
+/*Priorytety:
 ()										nawiasy
 ++ --									postfix
 ++ -- ~ ! sizeof + -					prefix oraz jednoargumentowe
@@ -15,4 +15,4 @@ Priorytety:
 ||										logiczne OR
 ?:										operator warunkowy
 = *= /= %= += -= >>= <<= &= ^= |=
-,
+,*/

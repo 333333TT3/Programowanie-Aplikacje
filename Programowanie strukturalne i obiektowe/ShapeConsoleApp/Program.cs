@@ -51,23 +51,23 @@ namespace ShapeConsoleApp
 
 
             Player[] players = new Player[2];
-            players[0] = new Human("X");
-            players[1] = new Bot("0");
+            //players[0] = new Human("X");
+            //players[1] = new Bot("0");
 
-            Board board = new Board();
+            //Board board = new Board();
             /*
              1 2 3
              4 5 6
              7 8 9
               */
 
-            int playerNumber = 1;
+            /*int playerNumber = 1;
             do
             {
                 playerNumber = playerNumber++ % 2;
                 board.Add(players[playerNumber].Ruch());
 
-            }while (board.IsEndGame());
+            }while (board.IsEndGame());*/
             //}while (nie koniec gry (wygrana lub remis));
 
 
