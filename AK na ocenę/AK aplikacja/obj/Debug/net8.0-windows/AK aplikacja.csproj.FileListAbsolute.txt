@@ -1,0 +1,16 @@
+C:\Users\Uczeń - sala 213\Desktop\AK na ocenę\AK aplikacja\bin\Debug\net8.0-windows\AK aplikacja.exe
+C:\Users\Uczeń - sala 213\Desktop\AK na ocenę\AK aplikacja\bin\Debug\net8.0-windows\AK aplikacja.deps.json
+C:\Users\Uczeń - sala 213\Desktop\AK na ocenę\AK aplikacja\bin\Debug\net8.0-windows\AK aplikacja.runtimeconfig.json
+C:\Users\Uczeń - sala 213\Desktop\AK na ocenę\AK aplikacja\bin\Debug\net8.0-windows\AK aplikacja.dll
+C:\Users\Uczeń - sala 213\Desktop\AK na ocenę\AK aplikacja\bin\Debug\net8.0-windows\AK aplikacja.pdb
+C:\Users\Uczeń - sala 213\Desktop\AK na ocenę\AK aplikacja\obj\Debug\net8.0-windows\AK_aplikacja.Form1.resources
+C:\Users\Uczeń - sala 213\Desktop\AK na ocenę\AK aplikacja\obj\Debug\net8.0-windows\AK aplikacja.csproj.GenerateResource.cache
+C:\Users\Uczeń - sala 213\Desktop\AK na ocenę\AK aplikacja\obj\Debug\net8.0-windows\AK aplikacja.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Uczeń - sala 213\Desktop\AK na ocenę\AK aplikacja\obj\Debug\net8.0-windows\AK aplikacja.AssemblyInfoInputs.cache
+C:\Users\Uczeń - sala 213\Desktop\AK na ocenę\AK aplikacja\obj\Debug\net8.0-windows\AK aplikacja.AssemblyInfo.cs
+C:\Users\Uczeń - sala 213\Desktop\AK na ocenę\AK aplikacja\obj\Debug\net8.0-windows\AK aplikacja.csproj.CoreCompileInputs.cache
+C:\Users\Uczeń - sala 213\Desktop\AK na ocenę\AK aplikacja\obj\Debug\net8.0-windows\AK aplikacja.dll
+C:\Users\Uczeń - sala 213\Desktop\AK na ocenę\AK aplikacja\obj\Debug\net8.0-windows\refint\AK aplikacja.dll
+C:\Users\Uczeń - sala 213\Desktop\AK na ocenę\AK aplikacja\obj\Debug\net8.0-windows\AK aplikacja.pdb
+C:\Users\Uczeń - sala 213\Desktop\AK na ocenę\AK aplikacja\obj\Debug\net8.0-windows\AK aplikacja.genruntimeconfig.cache
+C:\Users\Uczeń - sala 213\Desktop\AK na ocenę\AK aplikacja\obj\Debug\net8.0-windows\ref\AK aplikacja.dll
